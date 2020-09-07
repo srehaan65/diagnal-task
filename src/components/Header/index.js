@@ -1,22 +1,21 @@
 import React from "react";
 import "./index.css";
-import { Row, Col, Input } from "antd";
+import { Input } from "antd";
 
 const { Search } = Input;
 
-const Header = ({ title }) => {
+const Header = React.memo(({ title, filterPoster }) => {
   return (
     <div className="header">
       <div className="title">{title}</div>
       <div className="search">
         <Search
-          // placeholder="input search text"
-          onSearch={(value) => console.log(value)}
-          style={{ width: "00", backgroundColor: "#000000" }}
+          onChange={(value) => filterPoster(value)}
+          style={{ width: "00" }}
         />
       </div>
     </div>
   );
-};
+});
 
 export default Header;

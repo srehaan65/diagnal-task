@@ -1,14 +1,18 @@
-import React from "react";
+import React, { PureComponent } from "react";
 import "./App.css";
 import Content from "./components/Content";
 import Header from "./components/Header";
 import axios from "axios";
+import whyDidYouUpdate from "why-did-you-update";
 
-class App extends React.Component {
+// whyDidYouUpdate(React);
+
+class App extends PureComponent {
   state = {
     loading: false,
     data: [],
     title: "",
+    search: "",
   };
 
   componentDidMount() {
@@ -28,13 +32,23 @@ class App extends React.Component {
     });
   };
 
+  filtered = this.state.data;
+  filterPoster = (e) => {
+    const value = e.target.value;
+    this.setState({ search: value });
+    return value;
+  };
+
   render() {
-    const { data, title } = this.state;
-    // console.log(data);
+    const { data, title, search } = this.state;
+    const filtered = data.filter((item) =>
+      item.name.toLowerCase().includes(search.toLowerCase())
+    );
+
     return (
       <div className="App">
-        <Header title={title} />
-        <Content data={data} fetchImages={this.fetchImages} />
+        <Header title={title} filterPoster={this.filterPoster} />
+        <Content data={filtered} fetchImages={this.fetchImages} />
       </div>
     );
   }

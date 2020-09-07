@@ -11,9 +11,13 @@
 }
 
 .search .ant-input {
-  background-color: black;
+  background-color: "#574c4cb5";
   border: 0;
   width: 88px;
+}
+
+.ant-input:focus {
+  color: "#fff";
 }
 .search .ant-input:focus {
   border: 0 0 1px;
