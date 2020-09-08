@@ -4,6 +4,7 @@ import Content from "./components/Content";
 import Header from "./components/Header";
 import axios from "axios";
 import whyDidYouUpdate from "why-did-you-update";
+import db from "./db.json";
 
 // whyDidYouUpdate(React);
 
@@ -15,8 +16,11 @@ class App extends PureComponent {
     search: "",
   };
 
+  // newData = Object.keys(db).map((dbKey) => db(dbKey));
+
   componentDidMount() {
-    axios.get("http://localhost:5000/page").then((res) => {
+    axios.get("http://localhost:5000/page1").then((res) => {
+      console.log(res);
       const content = Object.entries(res.data).filter(
         (a) => a[0] === "content-items"
       )[0][1].content;
@@ -24,7 +28,7 @@ class App extends PureComponent {
     });
   }
   fetchImages = () => {
-    axios.get("http://localhost:5000/page").then((res) => {
+    axios.get("http://localhost:5000/page3").then((res) => {
       const content = Object.entries(res.data).filter(
         (a) => a[0] === "content-items"
       )[0][1].content;
