@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "66dc68f2d3640b3809a30853b85f7804",
+    "revision": "7ef54207c34c562ad8a5b6f3c702fd40",
     "url": "/diagnal-task/index.html"
   },
   {
-    "revision": "68daa0ba0b61e5e4622b",
-    "url": "/diagnal-task/static/css/main.71cfaea3.chunk.css"
+    "revision": "f306b0e9d8c8c6739300",
+    "url": "/diagnal-task/static/css/main.bdba2171.chunk.css"
   },
   {
-    "revision": "c83a1182c11402ac9b62",
-    "url": "/diagnal-task/static/js/2.55e43042.chunk.js"
+    "revision": "65197d4872a1ed495306",
+    "url": "/diagnal-task/static/js/2.bf5a3346.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/diagnal-task/static/js/2.55e43042.chunk.js.LICENSE.txt"
+    "url": "/diagnal-task/static/js/2.bf5a3346.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "68daa0ba0b61e5e4622b",
-    "url": "/diagnal-task/static/js/main.97f56676.chunk.js"
+    "revision": "f306b0e9d8c8c6739300",
+    "url": "/diagnal-task/static/js/main.3a2dc8b6.chunk.js"
   },
   {
     "revision": "f1bede73a92eedb30112",
